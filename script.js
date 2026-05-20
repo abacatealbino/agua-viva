@@ -1,16 +1,39 @@
-const botao = document.getElementById("botao");
-const mensagens = document.getElementById("mensagens");
+const paginas = document.querySelectorAll(".pagina");
 
-botao.addEventListener("click", () => {
+function esconderTudo(){
 
-  mensagens.classList.toggle("hidden");
+  paginas.forEach((pagina) => {
+    pagina.classList.remove("ativa");
+  });
 
-  if(botao.innerText === "mergulhar"){
-    botao.innerText = "voltar";
-  }
+}
 
-  else{
-    botao.innerText = "mergulhar";
-  }
+function abrirAlbuns(){
 
-});
+  esconderTudo();
+
+  document
+  .getElementById("albuns")
+  .classList.add("ativa");
+
+}
+
+function abrirPagina(id){
+
+  esconderTudo();
+
+  document
+  .getElementById(id)
+  .classList.add("ativa");
+
+}
+
+function voltar(){
+
+  esconderTudo();
+
+  document
+  .getElementById("albuns")
+  .classList.add("ativa");
+
+}

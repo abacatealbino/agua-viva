@@ -12,51 +12,157 @@
 
 <body>
 
-  <div class="overlay"></div>
+  <!-- TELA INICIAL -->
 
-  <div class="particles"></div>
+  <section id="inicio" class="pagina ativa">
 
-  <main class="container">
+    <div class="overlay"></div>
 
-    <h1>Água Viva</h1>
+    <div class="conteudo">
 
-    <p>
-      “Existem sentimentos que apenas atravessam.”
-    </p>
+      <h1>Água Viva</h1>
 
-    <button id="botao">
-      mergulhar
-    </button>
+      <p>
+        “Existem sentimentos que apenas atravessam.”
+      </p>
 
-    <section id="mensagens" class="hidden">
+      <button onclick="abrirAlbuns()">
+        mergulhar
+      </button>
 
-      <div class="card">
-        <h2>memórias</h2>
+    </div>
 
-        <p>
-          Algumas pessoas parecem oceano.
-        </p>
+  </section>
+
+  <!-- MENU DOS ÁLBUNS -->
+
+  <section id="albuns" class="pagina">
+
+    <h2>Escolha um álbum</h2>
+
+    <div class="cards-albuns">
+
+      <div class="album-card cor" onclick="abrirPagina('cor')">
+        <img src="https://i.scdn.co/image/ab67616d0000b27359fbb0c5f7f87e1b4fbe0e65">
+        <h3>COR</h3>
       </div>
 
-      <div class="card">
-        <h2>esquinas</h2>
-
-        <p>
-          Cada esquina guarda uma história.
-        </p>
+      <div class="album-card esquinas" onclick="abrirPagina('esquinas')">
+        <img src="https://i.scdn.co/image/ab67616d0000b2734b6d0b9f37f631b7d831bdb9">
+        <h3>ESQUINAS</h3>
       </div>
 
-      <div class="card">
-        <h2>constelação</h2>
-
-        <p>
-          Quando sentimentos viram estrelas.
-        </p>
+      <div class="album-card claraboia" onclick="abrirPagina('claraboia')">
+        <img src="https://i.scdn.co/image/ab67616d0000b273dd5e0e1df0b7fd5401397dbe">
+        <h3>CLARABOIA</h3>
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </section>
+
+  <!-- COR -->
+
+  <section id="cor" class="pagina cor-bg">
+
+    <div class="girassois"></div>
+
+    <div class="album-page">
+
+      <img class="capa"
+        src="https://i.scdn.co/image/ab67616d0000b27359fbb0c5f7f87e1b4fbe0e65">
+
+      <h1>COR</h1>
+
+      <div class="frases">
+
+        <p>“Trecho bonito que atravessa o peito.”</p>
+
+        <p>“O amor também floresce devagar.”</p>
+
+        <p>“Nem tudo precisa fazer sentido.”</p>
+
+      </div>
+
+      <button onclick="voltar()">
+        voltar
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- ESQUINAS -->
+
+  <section id="esquinas" class="pagina esquinas-bg">
+
+    <div class="aguas-vivas"></div>
+
+    <div class="album-page">
+
+      <img class="capa"
+        src="https://i.scdn.co/image/ab67616d0000b2734b6d0b9f37f631b7d831bdb9">
+
+      <h1>ESQUINAS</h1>
+
+      <div class="frases">
+
+        <p>
+          “Existem sentimentos que apenas atravessam.”
+        </p>
+
+        <p>
+          “Todo espetáculo estranho ainda encontra luz.”
+        </p>
+
+        <p>
+          “Água viva também sabe amar.”
+        </p>
+
+      </div>
+
+      <button onclick="voltar()">
+        voltar
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- CLARABOIA -->
+
+  <section id="claraboia" class="pagina claraboia-bg">
+
+    <div class="album-page">
+
+      <img class="capa"
+        src="https://i.scdn.co/image/ab67616d0000b273dd5e0e1df0b7fd5401397dbe">
+
+      <h1>CLARABOIA</h1>
+
+      <div class="frases">
+
+        <p>
+          “Tem dias que a luz entra diferente.”
+        </p>
+
+        <p>
+          “Algumas pessoas iluminam sem perceber.”
+        </p>
+
+        <p>
+          “O amor também mora nos silêncios.”
+        </p>
+
+      </div>
+
+      <button onclick="voltar()">
+        voltar
+      </button>
+
+    </div>
+
+  </section>
 
   <script src="script.js"></script>
 

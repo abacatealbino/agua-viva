@@ -5,18 +5,34 @@
 }
 
 body{
-  height:100vh;
+  font-family:Arial;
   overflow:hidden;
+}
 
-  display:flex;
+.pagina{
+  display:none;
+
+  width:100vw;
+  height:100vh;
+
+  position:relative;
+
   justify-content:center;
   align-items:center;
 
-  font-family:Arial;
+  overflow:hidden;
 
+  text-align:center;
+}
+
+.ativa{
+  display:flex;
+}
+
+#inicio{
   background:
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)),
-    url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop');
+  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop');
 
   background-size:cover;
   background-position:center;
@@ -31,35 +47,18 @@ body{
   backdrop-filter:blur(2px);
 }
 
-.container{
+.conteudo{
   position:relative;
   z-index:2;
-
-  text-align:center;
-  max-width:1000px;
-  padding:20px;
 }
 
 h1{
-  font-size:120px;
-
-  background:linear-gradient(
-    to right,
-    #67e8f9,
-    #c4b5fd
-  );
-
-  background-clip:text;
-  -webkit-background-clip:text;
-
-  color:transparent;
-
-  margin-bottom:20px;
+  font-size:90px;
 }
 
 p{
-  font-size:24px;
-  opacity:0.9;
+  margin-top:20px;
+  font-size:22px;
 }
 
 button{
@@ -70,62 +69,171 @@ button{
   border:none;
   border-radius:40px;
 
-  font-size:18px;
-
-  background:rgba(255,255,255,0.1);
-
-  color:white;
+  background:white;
 
   cursor:pointer;
 
   transition:0.3s;
-
-  backdrop-filter:blur(10px);
 }
 
 button:hover{
-  transform:scale(1.05);
-
-  background:rgba(255,255,255,0.2);
+  transform:scale(1.08);
 }
 
-#mensagens{
-  margin-top:60px;
+/* MENU */
+
+#albuns{
+  background:#050816;
+  color:white;
+  flex-direction:column;
+}
+
+.cards-albuns{
+  margin-top:50px;
 
   display:flex;
-  gap:20px;
-
-  justify-content:center;
-
-  flex-wrap:wrap;
+  gap:40px;
 }
 
-.card{
+.album-card{
   width:250px;
 
-  padding:25px;
+  padding:20px;
 
   border-radius:25px;
 
-  background:rgba(255,255,255,0.08);
+  cursor:pointer;
 
-  backdrop-filter:blur(10px);
-
-  border:1px solid rgba(255,255,255,0.1);
-
-  transition:0.3s;
+  transition:0.4s;
 }
 
-.card:hover{
-  transform:translateY(-10px);
+.album-card:hover{
+  transform:translateY(-15px);
 }
 
-.card h2{
-  margin-bottom:15px;
-
-  color:#c4b5fd;
+.album-card img{
+  width:100%;
+  border-radius:20px;
 }
 
-.hidden{
-  display:none !important;
+.album-card h3{
+  margin-top:20px;
+  font-size:30px;
+}
+
+.cor{
+  background:#facc15;
+  color:black;
+}
+
+.esquinas{
+  background:#7c3aed;
+}
+
+.claraboia{
+  background:#84cc16;
+}
+
+/* PÁGINAS DOS ÁLBUNS */
+
+.album-page{
+  position:relative;
+  z-index:2;
+
+  max-width:900px;
+}
+
+.capa{
+  width:250px;
+
+  border-radius:25px;
+
+  margin-bottom:30px;
+
+  box-shadow:0 0 40px rgba(0,0,0,0.4);
+}
+
+.frases{
+  margin-top:20px;
+}
+
+.frases p{
+  margin:20px 0;
+}
+
+/* COR */
+
+.cor-bg{
+  background:#facc15;
+  color:#422006;
+}
+
+.girassois{
+  position:absolute;
+  inset:0;
+
+  background-image:url('https://png.pngtree.com/png-clipart/20230914/original/pngtree-watercolor-sunflower-bouquet-png-image_12155296.png');
+
+  background-size:250px;
+
+  opacity:0.15;
+
+  animation:girar 20s linear infinite;
+}
+
+/* ESQUINAS */
+
+.esquinas-bg{
+  background:#2e1065;
+  color:white;
+}
+
+.aguas-vivas{
+  position:absolute;
+  inset:0;
+
+  background-image:url('https://static.vecteezy.com/system/resources/previews/022/257/597/original/jellyfish-transparent-free-png.png');
+
+  background-size:220px;
+
+  opacity:0.12;
+
+  animation:flutuar 12s ease-in-out infinite;
+}
+
+/* CLARABOIA */
+
+.claraboia-bg{
+  background:#bef264;
+  color:#365314;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes flutuar{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-20px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+@keyframes girar{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+
 }
